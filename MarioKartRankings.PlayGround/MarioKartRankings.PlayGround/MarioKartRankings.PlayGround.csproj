@@ -7,6 +7,16 @@
 
   <ItemGroup>
     <PackageReference Include="MathNet.Numerics" Version="4.9.0" />
+    <PackageReference Include="MathNet.Numerics.Data.Text" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="markov.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="nflnoheadings.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

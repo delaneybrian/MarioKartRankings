@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioKartRankings.PlayGround", "MarioKartRankings.PlayGround\MarioKartRankings.PlayGround.csproj", "{0BD81EBC-6EB6-4387-B342-638F781E8CC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarioKartRankings.PlayGround", "MarioKartRankings.PlayGround\MarioKartRankings.PlayGround.csproj", "{0BD81EBC-6EB6-4387-B342-638F781E8CC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkKartRankings.Domain", "MarkKartRankings.Domain\MarkKartRankings.Domain.csproj", "{342C94C7-B60E-48CC-9EC0-EC8B16E96B6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioKartRankings.Definitions", "MarioKartRankings.Definitions\MarioKartRankings.Definitions.csproj", "{BDE0DE93-25B5-432E-B802-62C4AEA5E16B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{0BD81EBC-6EB6-4387-B342-638F781E8CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BD81EBC-6EB6-4387-B342-638F781E8CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BD81EBC-6EB6-4387-B342-638F781E8CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{342C94C7-B60E-48CC-9EC0-EC8B16E96B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{342C94C7-B60E-48CC-9EC0-EC8B16E96B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{342C94C7-B60E-48CC-9EC0-EC8B16E96B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{342C94C7-B60E-48CC-9EC0-EC8B16E96B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE0DE93-25B5-432E-B802-62C4AEA5E16B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE0DE93-25B5-432E-B802-62C4AEA5E16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE0DE93-25B5-432E-B802-62C4AEA5E16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE0DE93-25B5-432E-B802-62C4AEA5E16B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
