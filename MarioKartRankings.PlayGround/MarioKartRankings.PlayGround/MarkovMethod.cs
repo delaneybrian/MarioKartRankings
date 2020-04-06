@@ -49,7 +49,9 @@ namespace MarioKartRankings.PlayGround
 
             var markovMatrix = Matrix<double>.Build.Dense(resultsMatrix.RowCount, resultsMatrix.ColumnCount, values.ToArray());
 
-            var eigen = markovMatrix.Evd();
+            var transpose = markovMatrix.Transpose();
+
+            var eigen = transpose.Evd();
             var eigenValues = eigen.EigenValues;
             var eigenVectors = eigen.EigenVectors.Column(4);
 

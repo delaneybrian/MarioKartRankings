@@ -8,15 +8,9 @@ namespace MarioKartRankings.PlayGround
     {
         static void Main(string[] args)
         {
-            Matrix<double> v = Matrix<double>.Build.Dense(3, 3, 1.0);
+            var odm = new OffenceDefenceMethod();
 
-            Matrix<double> g = Matrix<double>.Build.Dense(3, 3, 2.0);
-
-            var a = g + v;
-
-
-
-            MarkovMethod.Calculate();
+            odm.Calculate();
 
             Console.WriteLine("Finished...");
             Console.ReadKey();
