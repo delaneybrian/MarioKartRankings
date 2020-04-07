@@ -12,6 +12,10 @@ namespace MarioKartRankings.PlayGround
 
             odm.Calculate();
 
+            ColleysMethod.Calculate();
+
+            MarkovMethod.Calculate();
+
             Console.WriteLine("Finished...");
             Console.ReadKey();
         }

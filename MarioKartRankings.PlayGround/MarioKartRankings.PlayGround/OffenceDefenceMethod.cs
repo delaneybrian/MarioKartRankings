@@ -86,8 +86,6 @@ namespace MarioKartRankings.PlayGround
 
                 iterationNumber++;
 
-                Console.WriteLine(iterationNumber);
-
             } while (!HasConverged());
 
         }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
+using System.Linq;
 using System.Text;
 using MathNet.Numerics.Data.Text;
 using MathNet.Numerics.LinearAlgebra;
@@ -47,13 +49,32 @@ namespace MarioKartRankings.PlayGround
                 }
             }
 
-            var markovMatrix = Matrix<double>.Build.Dense(resultsMatrix.RowCount, resultsMatrix.ColumnCount, values.ToArray());
+            var markovMatrix = Matrix<double>
+                .Build
+                .Dense(
+                resultsMatrix.RowCount, 
+                resultsMatrix.ColumnCount, 
+                values.ToArray());
 
-            var transpose = markovMatrix.Transpose();
+            //var markovMatrix = Matrix<double>.Build.Dense(5, 5, new []
+            //    {     0.00, 0.25, 0.25, 0.25, 0.25, 
+            //          0.20, 0.20, 0.20, 0.20, 0.20, 
+            //          0.00, 0.50, 0.00, 0.00, 0.50, 
+            //          0.00, 0.33, 0.33, 0.00, 0.33, 
+            //          0.00, 1.00, 0.00, 0.00, 0.00});
 
-            var eigen = transpose.Evd();
-            var eigenValues = eigen.EigenValues;
-            var eigenVectors = eigen.EigenVectors.Column(4);
+            //var markovMatrixTranspose = markovMatrix
+            //    .Transpose();
+
+            var markovMatrixTransposeEigen = markovMatrix
+                .Evd();
+
+            var markovMatrixTransposeEigenTranspose = markovMatrixTransposeEigen
+                .EigenVectors
+                .Transpose()
+                .Row(0);
+
+            var stationaryVector = markovMatrixTransposeEigenTranspose / markovMatrixTransposeEigenTranspose.Sum();
 
             var a = 1;
         }
